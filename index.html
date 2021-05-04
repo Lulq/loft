@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovt</title>
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <header>
-        <div>
-            <img src="img/logo.svg" alt="Logo da Lovt">
+        <div class="header-left">
+            <img id="logo" src="img/logo.svg" alt="Logo da Lovt">
+            <!-- <h1 id="logo">LOVT</h1> -->
             <img src="img/You Love, your loft!.svg" alt="You Love, your">
         </div>
-        <img src="img/hamburguer.svg" alt="">
+
+        <p class="olaUsuario"></p>
+        <div class="header-right">
+            
+            <Span class="theme-name">Tema</Span>
+            
+            <label class="switch">
+                <input onclick=rsdarkMode() type="checkbox">
+                <span class="slider round"></span>
+            </label>          
+            
+                        
+            <img class="hamburguer" src="img/hamburguer.svg" alt="">
+        </div>
     </header>
     <main>
-        <div class="banner">
-            <img src="img/Rectangle3.svg" alt="">
+        <div class="container">
+            <div class="banner" style="background-image: url('img/Rectangle3.svg')"></div>
+            <!-- <img class="foto-principal" src="img/Rectangle3.svg" alt="banner-principal"> -->
+            <div class="buttons">
+                <div class="botao">
+                    <img src="img/arrow-left.svg" alt="">
+                </div>
+                <div class="botao">
+                    <img src="img/arrow-rigth.svg" alt="">
+                </div>
+                         
+            </div>
+                    
         </div>
         <div class="articles">
             <article class="card1">
@@ -58,6 +84,25 @@
             </div>
         </div>
     </main>
+    
+    
+    <section class="contact">
+        <div class="container">
+            <h2>Entre em contato</h2>
+            <form action="thanks.html" id="form_contact">
+                
+                <input type="text" name="nome" id="input_nome" placeholder="Nome">
+                <input type="text" name="email" id="input_email" placeholder="E-mail">
+                <input type="text" name="telefone" id="input_telefone" placeholder="Telefone">
+                <textarea name="mensagem" id="input_mensagem" cols="30" rows="10"></textarea>
+                <div class="mensagem-erro"></div>
+                <button type="submit" id="btn-submit-contact">enviar</button>
+
+            </form>
+        </div>
+    </section>
+    
+    
     <footer>
         <div class="mapa">
             <img src="img/image 1.svg" alt="">            
@@ -81,5 +126,21 @@
         </div>
 
     </footer>
+    
+
+        <div id="modal-newsletter" class="modal-container">
+            <div class="modal">
+                <button class="fechar">x</button>
+                <h3 class="subtitulo">Cadastre-se na nossa Newsletter</h3>
+                <form>
+                    <input type="text" class="input" placeholder="nome">
+                    <input type="text" class="input" placeholder="e-mail">
+                    <input type="button" class="button" value="Cadastrar">
+                </form>
+            </div>
+        </div>
+
+
+        <script src="js/main.js" ></script>
 </body>
 </html>
